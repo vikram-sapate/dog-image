@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 export class DogService {
   
   private apiUrl: string = 'https://dog.ceo/api';
-  private headers = new HttpHeaders().set('Content-Type', 'application/json');
   gotAllBreedsflag = false;
   breedNames: string[] = [];
   constructor(private http: HttpClient) { }
